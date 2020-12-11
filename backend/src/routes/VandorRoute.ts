@@ -6,8 +6,10 @@ const router = express.Router();
 
 router.post('/login', vandorLogin);
 
-//
-router.get('/profile', Authenticate, getVandorProfile);
+// Authenticate
+router.use(Authenticate);
+
+router.get('/profile', getVandorProfile);
 router.patch('/profile', updateVandorProfile);
 router.patch('/service', getVandorService);
 

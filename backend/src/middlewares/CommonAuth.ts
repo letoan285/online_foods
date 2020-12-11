@@ -15,6 +15,6 @@ export const Authenticate = async (req: Request, res: Response, next: NextFuncti
     if(validate){
         next();
     } else {
-        return res.json({message: ''})
+        return res.status(401).json({message: 'User is not authorized !'})
     }
 }
