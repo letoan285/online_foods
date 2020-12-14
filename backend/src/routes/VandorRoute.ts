@@ -23,7 +23,7 @@ router.use(Authenticate);
 
 router.get('/profile', getVandorProfile);
 router.patch('/profile', updateVandorProfile);
-router.patch('/coverimage', updateVandorCoverImage);
+router.patch('/coverimage', images, updateVandorCoverImage);
 
 router.patch('/service', getVandorService);
 
